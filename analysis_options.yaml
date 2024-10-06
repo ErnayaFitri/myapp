@@ -1,0 +1,74 @@
+# This file configures the analyzer, which statically analyzes Dart code to
+# check for errors, warnings, and lints.
+#
+# The issues identified by the analyzer are surfaced in the UI of Dart-enabled
+# IDEs (https://dart.dev/tools#ides-and-editors). The analyzer can also be
+# invoked from the command line by running `flutter analyze`.
+
+# The following line activates a set of recommended lints for Flutter apps,
+# packages, and plugins designed to encourage good coding practices.
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    # --- Commonly Useful Lint Rules ---
+
+    # Prefer using single quotes for strings unless the string contains single quotes.
+    prefer_single_quotes: true
+
+    # Disallow use of the `print` statement, to encourage the use of proper logging tools.
+    avoid_print: true
+
+    # Requires using proper types in collection literals and function arguments.
+    always_specify_types: true
+
+    # Disallow 'new' keyword in constructors.
+    unnecessary_new: true
+
+    # Disallow 'const' keyword where it is not necessary.
+    unnecessary_const: true
+
+    # Avoid declaring variables without a type, unless using `var` or `final`.
+    avoid_implicit_dynamic: true
+
+    # Disallow nested function declarations. This encourages better readability.
+    avoid_nested_functions: true
+
+    # Avoid returning null from methods or functions. Encourages usage of nullable types.
+    avoid_returning_null: true
+
+    # Enforce a maximum line length for better code readability.
+    lines_longer_than_80_chars: false # If you'd like to limit line length, change this to true.
+
+    # --- Performance and Readability ---
+
+    # Avoid having large classes, break them into smaller manageable classes.
+    avoid_classes_with_only_static_members: true
+
+    # Prefer using a final declaration for variables that will not be reassigned.
+    prefer_final_locals: true
+
+    # Use `const` for const constructors.
+    prefer_const_constructors: true
+
+    # Use `const` for const literals.
+    prefer_const_literals_to_create_immutables: true
+
+    # Prefer using `const` for immutable objects like Widgets, Text, etc.
+    prefer_const_declarations: true
+
+    # --- Best Practices ---
+
+    # Avoid redundant type annotations.
+    avoid_redundant_argument_values: true
+
+    # Suggest using `final` for loop variables if they are never reassigned.
+    prefer_final_in_for_each: true
+
+    # Prefer interpolation when building strings instead of concatenation.
+    prefer_interpolation_to_compose_strings: true
+
+    # --- Documentation ---
+
+    # Encourage writing proper documentation for public classes, methods, and fields.
+    public_member_api_docs: true
